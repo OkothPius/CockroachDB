@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="game-table mt-5">
-  <table class="table">
+  <table class="table table-hover">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -19,7 +19,7 @@
     {% for game in games %}
       <tbody>
         <tr>
-          <th scope="row">1</th>
+          <th scope="row">{{forloop.counter}}</th>
           <td>{{game.name}}</td>
           <td>{{game.viewer_hour}}</td>
           <td>{{game.hours_streamed}}</td>
@@ -31,7 +31,7 @@
     {% endfor %}
 
   </table>
-
 </div>
+
 
 {% endblock content %}
