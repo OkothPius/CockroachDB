@@ -3,7 +3,6 @@ from django.db import models
 class Game(models.Model):
     """
     This is a Game model class.
-    
     """
     name = models.CharField(max_length=100)
     viewer_hour = models.PositiveIntegerField()
