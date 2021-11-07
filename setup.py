@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 setup(
     name="cockroachDB",
     description="How to connect cockroachDB to a Django application.",
-    version='3.2.5',
+    version='3.2.9',
     url="",
     author="Oruko Pius",
     author_email="test@user.com",
