@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views import generic
+from django.views.generic import ListView, CreateView
 from .models import Game
 
 
@@ -10,11 +10,11 @@ class GameListView(ListView):
     model = Game
     template_name = 'core/index.html'
     context_object_name = 'games'
-    ordering = ['-date-posted']
+    ordering = ['-viewer_hour']
     paginate = 25
 
 
-class GameCreateView(Createview):
+class GameCreateView(CreateView):
     """
     Class Based View detailing how to create user information.
     """
