@@ -10,7 +10,7 @@ class GameListView(ListView):
     model = Game
     template_name = 'core/index.html'
     context_object_name = 'games'
-    ordering = ['-viewer_hour']
+    # ordering = ['-viewer_hour']
     paginate = 25
 
 
