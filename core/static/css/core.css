@@ -1,0 +1,12 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* Navbar styles */
+body {
+  font-family: 'Abel', sans-serif;
+  background: #fafafa;
+  color: #333333;
+}
+
+.game-table {
+    margin-bottom: 10%;
+}
