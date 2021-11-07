@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div class="game-table mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Viewer Hours</th>
+        <th scope="col">Hours Streamed</th>
+        <th scope="col">ACV</th>
+        <th scope="col">Creators</th>
+        <th scope="col">Streams</th>
+      </tr>
+    </thead>
+
+    {% for game in games %}
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>{{game.name}}</td>
+          <td>{{game.viewer_hour}}</td>
+          <td>{{game.hours_streamed}}</td>
+          <td>{{game.acv_num}}</td>
+          <td>{{game.creators}}</td>
+          <td>{{game.streams_num}}</td>
+        </tr>
+      </tbody>
+    {% endfor %}
+
+  </table>
+
+</div>
+
+{% endblock content %}
