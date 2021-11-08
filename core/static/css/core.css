@@ -7,6 +7,21 @@ body {
   color: #333333;
 }
 
+.navbar-brand {
+  font-weight: bold;
+}
+
 .game-table {
     margin-bottom: 10%;
+}
+/* Game form */
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  margin-top: 20px;
+  padding-bottom: 30px;
 }
