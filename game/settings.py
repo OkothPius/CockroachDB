@@ -1,5 +1,6 @@
 import os
 import environ
+import django_heroku
 import dj_database_url
 from pathlib import Path
 
@@ -19,7 +20,7 @@ SECRET_KEY = env('SECRET_KEY')
 # DEBUG = os.environ['DEBUG']
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['djangocockroachdb.herokuapp.com']
 
 
 # Application definition
