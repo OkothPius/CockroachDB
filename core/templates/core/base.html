@@ -12,7 +12,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 mb-5 fixed-top">
       <div class="container">
-        <a href="{% url 'home'%}" class="navbar-brand">Top Games Leaderboard</a>
+        <a href="{% url 'home'%}" class="navbar-brand" style="color: #4c7f99;">Top Games Leaderboard</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -25,7 +25,18 @@
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a href="#" class="nav-link">1 to 25 of 100</a>
+              {% if page_obj.has_previous %}
+              <a href="?page={{ page_obj.previous_page_number }}" class="nav-link"><i class="fa fa-chevron-left"></i></a>
+              {% endif %}
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</a>
+            </li>
+            <li class="nav-item">
+              {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="nav-link"><i class="fa fa-chevron-right"></i></a>
+              {% endif %}
             </li>
             <li class="nav-item">
               <a href="{% url 'game-create'%}" class="nav-link"><i class="fa fa-plus-circle"></i></a>
@@ -37,6 +48,9 @@
     <br>
 
     <!-- Showcase -->
-    {% block content %}{% endblock content %}
+    <div class="game-table mt-5">
+      {% block content %}{% endblock content %}
+    </div>
+
   </body>
 </html>
