@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 
 class Game(models.Model):
     """
@@ -13,3 +15,7 @@ class Game(models.Model):
 
     def __str__(self):
         return f'{self.name}'
+
+    # Handles redirect
+    def get_absolute_url(self):
+        return reverse('home')
