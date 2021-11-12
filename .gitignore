@@ -119,7 +119,8 @@ celerybeat.pid
 
 # Environments
 .env
-.cockroach-v21.1.10.linux-amd64
+.cockroach-data
+.cockroach-v21.1.11.linux-amd64
 .certs
 .venv
 env/
@@ -127,7 +128,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-cockroach-v21.1.10.linux-amd64/
+cockroach-v21.1.11.linux-amd64/
+cockroach-data/
 certs/
 
 # Spyder project settings
