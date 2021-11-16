@@ -22,7 +22,8 @@ SECRET_KEY = env('SECRET_KEY')
 # DEBUG = os.environ['DEBUG']
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['djangocockroachdb.herokuapp.com']
+# ALLOWED_HOSTS = ['djangocockroachdb.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
