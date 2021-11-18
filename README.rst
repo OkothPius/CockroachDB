@@ -1,3 +1,1 @@
-"""
-CockroachDB with Django
-"""
+**CockroachDB with Django**
