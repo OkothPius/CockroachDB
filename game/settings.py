@@ -142,3 +142,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
+
+# /home/kmaster/Documents/Django/CockroachDB/game/settings.py
