@@ -19,3 +19,4 @@ class Game(models.Model):
     # Handles redirect
     def get_absolute_url(self):
         return reverse('home')
+# /home/kmaster/Documents/Django/CockroachDB/core/models.py
