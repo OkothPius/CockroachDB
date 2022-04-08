@@ -1,6 +1,6 @@
 import os
 import environ
-import django_heroku
+import django_on_heroku
 import dj_database_url
 from pathlib import Path
 
@@ -75,14 +75,14 @@ DATABASES = {
         'ENGINE': 'django_cockroachdb',
         'NAME': env('DATABASE_NAME'),
         'USER': env('DATABASE_USER'),
-        'PASSWORD': env('DATABASE_URL'),
+        'PASSWORD': env('DATABASE_PASS'),
         'HOST': env('DATABASE_HOST'),
         'PORT': env('DATABASE_PORT'),
     },
 }
 
-DATABASES['default'] = dj_database_url.config(default=os.path.expandvars(
-    os.environ['DATABASE_URL']), engine='django_cockroachdb')
+# DATABASES['default'] = dj_database_url.config(default=os.path.expandvars(
+#     os.environ['DATABASE_URL']), engine='django_cockroachdb')
 
 
 # Password validation
@@ -141,4 +141,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
+django_on_heroku.settings(locals())
