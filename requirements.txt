@@ -1,6 +1,6 @@
 asgiref==3.4.1
 dj-database-url==0.5.0
-Django==3.2.9
+Django==3.2.12
 django-cockroachdb==3.2.1
 django-crispy-forms==1.14.0
 django-environ==0.8.1
